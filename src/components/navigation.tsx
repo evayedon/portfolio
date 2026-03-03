@@ -1,29 +1,35 @@
+const nav = [
+  { navbar: "#Home", abt: "Home" },
+  { navbar: "#About", abt: "About" },
+  { navbar: "#projects", abt: "Projects" },
+  { navbar: "#contant", abt: "Contact" },
+];
+
 function Navigation() {
   return (
     <>
-      <nav>
-        <div className="text-[16px] text-black font-['Inter:Medium',sans-serif] font-medium">
-          <ul className="flex-shrink cursor-pointer flex  relative size-full k gap-3 place-content-end">
-            <li>
-              <a href="#home" className="hover:text-blue-400 opacity-80">Home</a>
-            </li>
-            <li>
-              <a href="#about" className="hover:text-blue-400 opacity-80">About</a>
-            </li>
-            <li>
-              <a href="#skills" className="hover:text-blue-400 opacity-80">Skills</a>
-            </li>
-            <li>
-              <a href="#projects" className="hover:text-blue-400 opacity-80">Projects</a>
-            </li>
-            <li>
-              <a href="#contact" className="hover:text-blue-400 opacity-80">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <div className=" flex relative items-center justify-center space-x-[40%] border-double border-b-7 h-20  w-screen border-orange-500 ">
+        <h1 className="text-[40px] text-white">Portfolio</h1>
+
+        <nav>
+          <div className="flex place-end text-[16px] text-orange-500 font-['Inter:Medium',sans-serif] font-medium">
+            <ul className="flex-shrink cursor-pointer flex  relative gap-4 place-content-end">
+              {nav.map((navi, index) => (
+                <li
+                  key={index}
+                  className=" hover:text-blue-400 opacity-80 border-[2.5px] py-2 px-4 rounded-3xl transition-y-7 duration-300"
+                >
+                  <a href={navi.navbar} className="">
+                    {navi.abt}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </nav>
+      </div>
     </>
-    );
+  );
 }
 
 export default Navigation;

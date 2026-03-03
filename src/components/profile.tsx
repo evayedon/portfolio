@@ -2,41 +2,15 @@ import profileImg from "../assets/profile.jpg";
 
 function profile() {
     return(
-        <>
-            <section id="home" className="">
-            <div className="">
-                <div className="-">
-                <h1>
-                    <div className="">Evans Ayensu Donkor</div>
-                    Hi, I'm <span className="text-green-200">Evans</span>
-                </h1>
-                <p className="">Aspiring Software Engineer</p>
-                <p className="">
-                    Computer Science student at Ivy Tech Community College,
-                    passionate about building scalable applications and solving
-                    complex problems through elegant code.
-                </p>
-                <div className="">
-                    <a href="#projects" className="">
-                    View My Work
-                    </a>
-                    <a href="#contact" className="">
-                    Get In Touch
-                    </a>
-                </div>
-                </div>
-            </div>
-            <div className="">
-                <div className=""></div>
-                <img
-                src={profileImg}
-                className=""
-                alt="profile picture"
-                width="200"
-                />
-            </div>
-        </section>
-        </>
+    <>
+    <div className="flex space-between bg-red-500 ">
+        <div> MY name is Evans Ayensu Donkor </div>
+        <div className="items-end rounded-[50%] h-80 w-80" >
+        <img src={profileImg} className="h-[80%]  object-fill bg-green-500 "></img>
+        </div>
+    </div>
+            
+    </>
     );
 }
 

@@ -1,17 +1,15 @@
 import Navigation from "./components/navigation";
 import Profile from "./components/profile";
 
-
 function App() {
   return (
-    <> 
-      <div className="flex flex-col content-center bg-blue-300 min-h-screen max-w-screen content-box pr-100 pl-100">
-        <Navigation/>
+    <>
+      <div className=" flex flex-col bg-[#333333] h-screen items-center gap-y-30">
+          <Navigation />
+
         <Profile />
-      </div>     
-
+      </div>
     </>
-
   );
 }
 
