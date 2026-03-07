@@ -6,7 +6,9 @@ function profile() {
       <div className="flex justify-center space-x-10 items-center px-[10%]">
         <div className=" text-white  w-200 space-y-10 font-['Inter:Medium',sans-serif] font-medium">
           {" "}
-          <h3 className="text-orange-500 text-5xl font-bold">Evans Ayensu Donkor</h3>
+          <h3 className="text-orange-500 text-5xl font-bold">
+            Evans Ayensu Donkor
+          </h3>
           <p className="text-3xl ">
             Computer Science student at Ivy Tech Community College with a
             passion for transforming innovative ideas into functional software

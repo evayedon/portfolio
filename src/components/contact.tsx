@@ -44,7 +44,7 @@ export function DisplayList() {
 
   return (
     <>
-      <div className="animate-wiggle ">{list[next]}</div>
+      <div className="">{list[next]}</div> {/*animate to wiggle*/}
     </>
   );
 }
