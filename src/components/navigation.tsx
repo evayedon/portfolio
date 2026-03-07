@@ -2,13 +2,13 @@ const nav = [
   { navbar: "#Home", abt: "Home" },
   { navbar: "#About", abt: "About" },
   { navbar: "#projects", abt: "Projects" },
-  { navbar: "#contant", abt: "Contact" },
+  { navbar: "#contact", abt: "Contact" },
 ];
 
 function Navigation() {
   return (
     <>
-      <div className=" flex relative items-center justify-center space-x-[40%] border-double border-b-7 h-20  w-screen border-orange-500 ">
+      <div className=" flex relative items-center justify-center space-x-[40%] border-double border-b-8 h-20  w-screen border-orange-500  ">
         <h1 className="text-[40px] text-white">Portfolio</h1>
 
         <nav>
@@ -17,7 +17,7 @@ function Navigation() {
               {nav.map((navi, index) => (
                 <li
                   key={index}
-                  className=" hover:text-blue-400 opacity-80 border-[2.5px] py-2 px-4 rounded-3xl transition-y-7 duration-300"
+                  className=" hover:text-blue-400  opacity-80 border-[2.5px] py-2 px-4 rounded-3xl transition-y-7 duration-200"
                 >
                   <a href={navi.navbar} className="">
                     {navi.abt}
