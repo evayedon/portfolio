@@ -1,8 +1,42 @@
-import React from "react";
-import pic from "../assets/profile.jpg";
 import { useState, useEffect } from "react";
 
 const greetings = ["Bonjour!", "Hola!", "こんにちは!", "你好!", "Hɛlo"];
+
+export const nav = [
+  { navbar: "#Home", abt: "Home" },
+  { navbar: "#About", abt: "About" },
+  { navbar: "#projects", abt: "Projects" },
+  { navbar: "#contant", abt: "Contact" },
+];
+
+export function Navigation() {
+  return (
+    <>
+      <div className=" flex relative items-center justify-center space-x-[40%] border-double border-b-8 h-20  w-screen border-orange-500  ">
+        <h1 className="text-3xl text-white">EVAYEDON</h1>
+
+        <nav>
+          <div className="flex place-end text-[16px] text-orange-500 font-['Inter:Medium',sans-serif] font-medium">
+            <ul className="flex-shrink cursor-pointer flex  relative gap-4 place-content-end">
+              {nav.map((navi, index) => (
+                <li
+                  key={index}
+                  className=" hover:text-blue-400  opacity-80 border-[2.5px] py-2 px-4 rounded-3xl transition-y-7 duration-200"
+                >
+                  <a href={navi.navbar} className="">
+                    {navi.abt}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </>
+  );
+}
+
+
 const navigation = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -16,9 +50,10 @@ const navigation = () => {
 
   return (
     <section className="">
-      <nav className="flex px-[7%] text-white justify-between py-5 bg-[#333333]">
+
+     {/* <nav className="flex px-[7%] text-white justify-between py-5 bg-[#333333]">
         <div>
-          {/*<img src={pic} alt='logo'/>*/}
+          
           <h1>helo</h1>
         </div>
         <div className="flex">
@@ -31,7 +66,8 @@ const navigation = () => {
           </ul>
         </div>
       </nav>
-
+    */}
+      <Navigation/>
       <div className="relative h-screen bg-[#333333]">
         <style>
           {`
@@ -84,7 +120,7 @@ const navigation = () => {
                       <br />
                       {"    "}
                       <span className="text-gray-100">"name"</span>:{" "}
-                      <span className="text-orange-400">"Evans Ayensu"</span>,
+                      <span className="text-orange-400">"Evans Ayensu Donkor"</span>,
                       <br />
                       {"    "}
                       <span className="text-gray-100">

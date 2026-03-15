@@ -79,21 +79,30 @@ export function DisplayConnection() {
 
 const contact = () => {
   return (
-    <div className="flex flex-col items-center  ">
-      <div className="pt-20  w-150">
-        <div className="flex flex-col items-center h-30">
-          <h1 className="text-white text-2xl font-bold ">MY CONTACT</h1>
+    <>
+      <div className="flex flex-col items-center  ">
+        <div className="pt-20  w-150 mb-20">
+          <div className="flex flex-col items-center h-30">
+            <h1 className="text-white text-2xl font-bold ">MY CONTACT</h1>
 
-          <div className="flex text-orange-500 text-xl items-center p-2 ">
-            <h2 className="py-1 px-2"> SHOOT ME</h2>
-            <h2 className="bg-white rounded-lg py-1 px-2 ">
-              <DisplayList />
-            </h2>
+            <div className="flex text-orange-500 text-xl items-center p-2 ">
+              <h2 className="py-1 px-2"> SHOOT ME</h2>
+              <h2 className="bg-white rounded-lg py-1 px-2 ">
+                <DisplayList />
+              </h2>
+            </div>
           </div>
+          <DisplayConnection />
         </div>
-        <DisplayConnection />
+        <h1 className="text-white text-2xl font-bold mb-2">SPREAD THE WORD!</h1>
+        <h1 className="text-orange-500"> INTERESTED? SHARE MY PORTFOLIO!</h1>
+        <p className="flex justify-center gap-5 pb-10 text-gray-400 my-15 border-white border-b-2 through w-screen">
+          <span >Facebook</span> <span>Twitter</span>
+          <span>LinkedIn</span>
+        </p>
       </div>
-    </div>
+      <div className=""></div>
+    </>
   );
 };
 
