@@ -2,3 +2,11 @@
 
 
 
+@keyframes slideIn {
+  from { transform: translateX(-100%); }
+  to   { transform: translateX(0); }
+}
+
+.box {
+  animation: slideIn 0.4s ease forwards;
+}
