@@ -6,7 +6,7 @@ const projects = [
   {
     name: "Smart Parking System Simulator",
     type: "SYSTEM DEVELOPMENT",
-    link: "",
+    link: "https://github.com/evayedon/Smart-Parking-Simulator",
     description:
       "Advanced Python application simulating smart parking solutions. Implements object-oriented principles and optimized algorithms for efficient parking management with real-time availability tracking.",
     image: codeblockImg,
@@ -14,7 +14,7 @@ const projects = [
   {
     name: "Weather App",
     type: "WEB DEVELOPMENT",
-    link: "",
+    link: "https://github.com/evayedon/Weather-App",
     description:
       "Interactive weather application leveraging public APIs to deliver real-time meteorological data. Features include 5-day forecasts and location search with a responsive interface.",
     image: codingImg,
@@ -22,7 +22,7 @@ const projects = [
   {
     name: "Game Store Management System",
     type: "SYSTEM DEVELOPMENT",
-    link: "",
+    link: "https://github.com/evayedon/Game-Store-Management-System",
     description:
       "Full-featured store management system with inventory tracking, sales reporting, and customer management built with Python and SQLite.",
     image: codeblockImg,

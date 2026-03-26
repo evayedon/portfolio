@@ -1,6 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
-import Navigation from "./navigation";
 
 const greetings = ["Bonjour!", "Hola!", "こんにちは!", "你好!", "Hɛlo!"];
 

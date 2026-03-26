@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import Navigation from "./components/navigation";
 import Contact from "./components/contact";
 import About from "./components/about";
-import Projects from "./components/projects";
 import HeroSection from "./components/hero";
 
 function App() {
