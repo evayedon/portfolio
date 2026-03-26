@@ -1,5 +1,5 @@
 {
-  "name": "portfolio-app",
+  "name": "evayedon",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -17,6 +17,7 @@
     "@tailwindcss/vite": "^4.2.1",
     "motion": "^12.38.0",
     "react": "^19.2.0",
+    "react-router-dom": "^7.13.2",
     "tailwindcss": "^4.2.1"
   },
   "devDependencies": {

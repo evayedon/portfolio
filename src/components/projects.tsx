@@ -72,14 +72,15 @@ export default function Projects() {
               href={proj.link}
               target="_blank"
               rel="noreferrer"
-              className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity"
-            >
+              className="absolute top-3 bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity"
+            > 
               <motion.div
                 whileHover={{ x: 3, y: -3 }}
-                className="bg-orange-500 rounded-full p-1.5"
-              >
+                style={{ fontFamily: "Syne" , fontWeight:700}}
+                className="flex bg-orange-500 text-black items-center justify-between rounded-lg w-20  p-1.5"
+              >View
                 <svg
-                  className="w-4 h-4 text-black"
+                  className="w-5 h-5 text-black"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"

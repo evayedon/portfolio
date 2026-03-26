@@ -58,7 +58,7 @@ function Navigation({ activeSection }: NavigationProps) {
                   className={`relative py-2 px-4 rounded-3xl cursor-pointer transition-all duration-200 border-[2.5px] block ${
                     isActive
                       ? "bg-orange-500 text-black border-orange-500 font-bold"
-                      : "opacity-90 hover:bg-white hover:text-black border-current"
+                      : "opacity-90 hover:bg-white/85 hover:text-black border-current"
                   }`}
                 >
                   {link.label}

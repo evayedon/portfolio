@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import profileImg from "../assets/profile.jpg";
@@ -59,14 +58,18 @@ export default function About() {
       >
         {/* Text */}
         <div className="text-white space-y-6 font-medium flex-1 max-w-xl">
+                  <p className="text-orange-500 text-xs tracking-[0.2em] uppercase font-mono mb-4">
+          // who i am
+        </p>
           <motion.h1
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-4xl"
+            className="text-4xl "
+            style={{ fontFamily: "Syne", fontWeight: 800 }}
           >
-            Hi, I'm <span className="text-orange-500 font-bold">Evans</span>
+            Hi, I'm <span className="text-orange-500">Evans</span>
           </motion.h1>
 
           <div className="text-lg space-y-4 text-gray-300 leading-relaxed">

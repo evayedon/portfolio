@@ -27,7 +27,7 @@ export default function Skills() {
         <p className="text-orange-500 text-xs tracking-[0.2em] uppercase font-mono mb-2">
           // what I work with
         </p>
-        <h2 className="text-3xl font-bold text-white">Tech Skills</h2>
+        <h2 style={{ fontFamily: "Syne", fontWeight: 800 }} className="text-3xl font-bold text-white">Tech Skills</h2>
       </motion.div>
 
       <div className="flex flex-col gap-10">

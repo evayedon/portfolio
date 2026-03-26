@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+{
+  /*import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import RightArrow from "../assets/arrow-right.png";
 
@@ -98,7 +99,7 @@ export function DisplayConnection() {
 const Contact = () => {
   return (
     <div className="flex flex-col items-center py-24 px-4">
-      {/* Header */}
+      {/* Header *}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -119,7 +120,7 @@ const Contact = () => {
 
       <DisplayConnection />
 
-      {/* Share section */}
+      {/* Share section *}
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -148,3 +149,187 @@ const Contact = () => {
 };
 
 export default Contact;
+
+
+
+*/
+}
+
+import { useState } from "react";
+import { motion } from "framer-motion";
+import RightArrow from "../assets/arrow-right.png";
+
+const contact = () => {
+  const [result, setResult] = useState("");
+
+  const handleSubmit = async (event: any) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", import.meta.env.VITE_APIKEY);
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+    }
+  };
+
+  return (
+    <div
+      style={{ fontFamily: "Syne" }}
+      className=" min-h-screen text-white overflow-x-hidden flex justify-center  items-center justify-between gap-10"
+    >
+      <div className=" pr-20 ">
+        <motion.h1
+          style={{ fontWeight: 800 }}
+          className=" text-2xl md:text-5xl mb-4"
+        >
+          Shoot me<br></br>
+          <span className="text-orange-500"> a message</span>
+        </motion.h1>
+        <motion.p className="text-sm md:w-100 text-gray-500 text-gray-500 font-bold">
+          Whether it's a collab invite, an opportunity, or just a connection —
+          I'm always open to talking.
+        </motion.p>
+        {[
+          {
+            connect: "LinkedIn",
+            description: "Let's connect professionally",
+            link: "https://www.linkedin.com/in/evans-ayensu-donkor-730b30289",
+          },
+          {
+            connect: "GitHub",
+            description: "Check out my repository",
+            link: "https://github.com/evayedon",
+          },
+        ].map((connection, index) => (
+          <motion.a
+            key={index}
+            href={connection.link}
+            target="_blank"
+            rel="noreferrer"
+            className="group text-white cursor-pointer block"
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: index * 0.1 }}
+            whileHover="hover"
+          >
+            <div className="flex items-center justify-between border-b-1 border-orange-500 my-4  pb-4   ease-in-out">
+              <motion.div
+                className="flex flex-col text-lg font-bold"
+                variants={{ hover: { x: 6 } }}
+                transition={{ delay: 0.1, duration: 0.2 }}
+              >
+                <h1 className=" group-hover:text-orange-500">
+                  {connection.connect}
+                </h1>
+                <p className="text-gray-400 text-sm">
+                  {connection.description}
+                </p>
+              </motion.div>
+
+              <motion.div
+                variants={{ hover: { x: 6, y: -5 } }}
+                transition={{ delay: 0.1, duration: 0.2 }}
+              >
+                <img src={RightArrow} alt="arrow" className="w-6 h-6" />
+              </motion.div>
+            </div>
+          </motion.a>
+        ))}
+      </div>
+
+      <div className="flex items-center justify-center md:w[30%] ">
+        <div className="max-w-2xl w-full text-orange-500">
+          <motion.h1
+            className="text-2xl md:text-7xl font-light leading-none mb-12 tracking-tight text-center"
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            GET IN TOUCH
+          </motion.h1>
+
+          <form onSubmit={handleSubmit} className="space-y-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+            >
+              <label htmlFor="name" className="text-gray-400 text-lg">
+                Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                className="w-full mt-2 p-4 bg-gray-900 border border-gray-800 rounded-lg focus:outline-none focus:border-orange-500  transition-colors"
+                required
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.5 }}
+            >
+              <label htmlFor="email" className="text-gray-400 text-lg">
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                className="w-full mt-2 p-4 bg-gray-900 border border-gray-800 rounded-lg focus:outline-none focus:border-orange-500  transition-colors"
+                required
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.5 }}
+            >
+              <label htmlFor="message" className="text-gray-400 text-lg">
+                Message
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                rows="6"
+                className="w-full mt-2 p-4 bg-gray-900 border border-gray-800 rounded-lg focus:outline-none focus:border-orange-500 transition-colors"
+                required
+              ></textarea>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5, duration: 0.5 }}
+              className="text-center"
+            >
+              <button
+                type="submit"
+                className=" text-orange-500 font-light py-4 px-8 rounded-lg hover:bg-white/85 transition-colors text-lg border-3"
+              >
+                Submit
+              </button>
+            </motion.div>
+          </form>
+          <span>{result}</span>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default contact;
