@@ -118,7 +118,7 @@ export default function About() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.2 }}
-        className="w-full max-w-2xl mb-14 space-y-3"
+        className="w-full max-w-218 mt-10 mb-14 space-y-3"
       >
         <p className="text-orange-500 text-xs tracking-[0.2em] uppercase font-mono mb-4">
           // Education
