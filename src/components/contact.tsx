@@ -150,7 +150,7 @@ const contact = () => {
                 <textarea
                   id="message"
                   name="message"
-                  rows="5"
+                  rows={5}
                   className="w-full mt-2 p-4 bg-gray-900 border border-gray-800 rounded-lg focus:outline-none focus:border-orange-500 transition-colors"
                   required
                 ></textarea>
